@@ -1,13 +1,10 @@
 {
-  /* 
-  ** uncomment and update directory if lint errors aren't underlined
   "eslint.workingDirectories": [
     {
       "directory": "./react-app",
       "changeProcessCWD": true
     }
   ],
-  */
   "[html]": {
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
