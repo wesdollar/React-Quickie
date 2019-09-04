@@ -22,19 +22,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run npm:install:react && npm run npm:install:angular && npm run angular:build && npm run react:build",
+    "build": "npm run npm:install:react && npm run react:build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.jsx src/**/*.js",
-    "angular:watch": "cd angular-app && npx grunt watch",
-    "angular:build": "cd angular-app && npx grunt build:local",
-    "angular:server": "cd angular-app && http-server -c-l -p 8080",
-    "angular": "npm run angular:build",
     "react": "npm run start",
     "react:build": "react-scripts build",
     "pre-commit": "pretty-quick --staged && npm run lint",
-    "post-merge": "npm i && npm run angular",
-    "npm:install:angular": "cd angular-app && npm i",
     "npm:install:react": "npm i"
   },
   "eslintConfig": {
@@ -257,8 +251,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run pre-commit",
-      "post-merge": "npm run post-merge"
+      "pre-commit": "npm run pre-commit"
     }
   }
 }
